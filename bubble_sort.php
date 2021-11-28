@@ -15,8 +15,8 @@
                     $siguiente = $x + 1;
                     if($array[$x] > $array[$siguiente]){
                         list($array[$x], $array[$siguiente]) = array($array[$siguiente], $array[$x]);
+                        echo '<pre>'; print_r(array_filter($array)); echo '</pre>';
                     }
-                    echo '<pre>'; print_r(array_filter($array)); echo '</pre>';
                 };
             };
         }
