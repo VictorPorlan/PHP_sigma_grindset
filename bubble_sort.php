@@ -8,7 +8,19 @@
 </head>
 <body>
     <?php
-        
+        function bubble($array){
+            $size = count($array);
+            for($i = 0; $i<$size; $i++){
+                for($x = 0; $x<$size; $x++){
+                    $siguiente = $x + 1;
+                    if($array[$x] > $array[$siguiente]){
+                        list($array[$x], $array[$siguiente]) = array($array[$siguiente], $array[$x]);
+                    }
+                    echo '<pre>'; print_r(array_filter($array)); echo '</pre>';
+                };
+            };
+        }
+        bubble([3,2,5,6,1,7,8])
     ?>
 </body>
 </html>
