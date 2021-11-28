@@ -9,6 +9,7 @@
 <body>
     <?php
         function bubble($array){
+            echo '<pre>'; print_r(array_filter($array)); echo '</pre>';
             $size = count($array);
             for($i = 0; $i<$size; $i++){
                 for($x = 0; $x<$size; $x++){
