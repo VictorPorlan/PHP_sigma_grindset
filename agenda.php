@@ -15,9 +15,9 @@
     if (!isset($_SESSION['agenda'])) {
         $_SESSION['agenda'] = array();
     }
-    $nombre = $_GET['nombre'];
-    $telefono = $_GET['telefono'];
     if (isset($_GET['submit'])) {
+        $nombre = $_GET['nombre'];
+        $telefono = $_GET['telefono'];
         if (empty($nombre) or empty($telefono))
             echo ('Rellena el formulario');
         else {
