@@ -12,12 +12,12 @@
     <?php
     if (isset($_COOKIE["contador"])) {
         echo "Contador: " . $_COOKIE["contador"];
+        $contador = ++$_COOKIE["contador"];
+        setcookie('contador', $contador);
     } else {
         echo "Aun no has recargado";
         setcookie("contador", 1, time() + 2 * 24 * 60 * 60);
     }
-    $contador = ++$_COOKIE["contador"];
-    setcookie('contador', $contador)
     ?>
 </body>
 
